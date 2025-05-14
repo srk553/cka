@@ -4,6 +4,9 @@ network:
       dhcp4: false
       addresses:
         - 172.22.6.205/20
+      gateway4: 172.22.6.250
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]
       routes:
         - to: 0.0.0.0/0
           via: 172.22.6.250
