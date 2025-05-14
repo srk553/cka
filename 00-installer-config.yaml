@@ -1,0 +1,10 @@
+network:
+  ethernets:
+    ens160:
+      dhcp4: false
+      addresses:
+        - 172.22.6.205/20
+      routes:
+        - to: 0.0.0.0/0
+          via: 172.22.6.250
+  version: 2
