@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  volumes:
+    - name: web-index-volume
+      configMap:
+        name: web-index
+  containers:
+    - name: nginx
+      image: nginx:latest
+      volumeMounts:
+        - name: web-index-volume
+          mountPath: /usr/share/nginx/html
