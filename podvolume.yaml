@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: morvol
+spec:
+  volumes:
+    - name: test
+      emptyDir: {}
+  containers:
+    - image: centos:7
+      name: centos-one
+      volumeMounts:
+        - mountPath: /centos-one
+          name: test
+    - image: centos:7
+      name: centos-two
+      volumeMounts:
+        - mountPath: /centos-two
+          name: test
