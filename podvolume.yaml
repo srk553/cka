@@ -9,11 +9,13 @@ spec:
   containers:
     - image: centos:7
       name: centos-one
+      command: ["/bin/bash", "-c", "while true; do sleep 30; done"]
       volumeMounts:
         - mountPath: /centos-one
           name: test
     - image: centos:7
       name: centos-two
+      command: ["/bin/bash", "-c", "while true; do sleep 30; done"]
       volumeMounts:
         - mountPath: /centos-two
           name: test
