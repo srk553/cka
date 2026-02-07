@@ -1,10 +1,10 @@
 network:
   version: 2
   ethernets:
-    ens192:
+    ens18:
       dhcp4: false
       addresses:
-        - 172.22.6.205/20
+        - 172.22.120.205/24
       nameservers:
         addresses: [8.8.8.8, 8.8.4.4]
       routes:
